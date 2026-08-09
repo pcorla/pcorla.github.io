@@ -26,7 +26,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: May 2026</p>
+<p class="updated">Last updated: August 2026</p>
 
 <hr />
 
@@ -38,18 +38,21 @@
 
 <h2>2. Overview</h2>
 <p>
-  Pantr is an app for managing shopping lists and recipes. The app does not collect
-  personal data for advertising or analytics purposes and does not share any data
-  with advertisers. The following explains what data is processed when you use the
-  app and how it is handled.
+  Pantr is an app for managing shopping lists, recipes and your pantry. The app does not
+  collect personal data for advertising or analytics purposes and does not share any data
+  with advertisers. There is no Pantr account and no provider-operated server: your content
+  lives on your device and — if you are signed in to iCloud — in your own iCloud account.
+  The following explains what data is processed when you use the app and how it is
+  handled.
 </p>
 
 <h2>3. Data Processed</h2>
 
 <h2>3.1 Data on Your Device and in iCloud</h2>
 <p>
-  All content you enter — recipes, ingredients, shopping lists, settings — is stored
-  locally on your device. If you are signed in to an Apple ID on your device, the app
+  All content you enter — recipes, ingredients, shopping lists, pantry items (including
+  quantities, package sizes and expiry dates) and settings — is stored locally on your
+  device. If you are signed in to an Apple ID on your device, the app
   <strong>automatically</strong> synchronises this data with your iCloud account —
   no configuration required (see 3.2). Without an iCloud account, all data remains
   exclusively on your device.
@@ -57,12 +60,20 @@
 
 <h2>3.2 iCloud / CloudKit</h2>
 <p>
-  If you are signed in to an Apple ID on your device, recipes and shopping lists are
-  synchronised across your Apple devices via <strong>CloudKit</strong> (Apple Inc.)
+  If you are signed in to an Apple ID on your device, recipes, shopping lists and pantry
+  items are synchronised across your Apple devices — including a paired Apple Watch — via
+  <strong>CloudKit</strong> (Apple Inc.)
   and — if you use the sharing feature — shared with people you choose. Data is stored
   in your personal iCloud container and is subject to
   <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>.
   Pantr has no access to this data outside of your device.
+</p>
+<p>
+  You can keep several households side by side and share each of them separately. Within a
+  shared household, other participants can see who added an item or a recipe: for this,
+  Pantr stores the first and last name that Apple provides for your iCloud account through
+  the sharing feature. That name is only ever displayed inside the shared household it
+  belongs to.
 </p>
 <p>
   Synchronisation via iCloud happens automatically when you are signed in to an Apple ID
@@ -70,40 +81,98 @@
   iCloud account, the app works entirely locally.
 </p>
 
-<h2>3.3 OpenAI API (optional)</h2>
+<h2>3.3 AI features (optional)</h2>
 <p>
-  The AI-powered features of the app (recipe import from URLs or photos, AI recipe
-  generation) require your own OpenAI API key, which you can optionally enter in the
-  app's settings. This key is stored <strong>exclusively in your device's Keychain</strong>
-  and is never transmitted to any third party.
+  The AI-powered features (recipe import from URLs or photos, generating a recipe from a
+  name or from your pantry, nutrition analysis recommendations) are optional. You choose
+  the provider in the app's settings; the default is <strong>“Disabled”</strong>, in which
+  case no AI features are shown and no data is transmitted for AI purposes at all.
 </p>
-<p>
-  When you use one of these features, the relevant content (e.g. the text of a web page
-  or a recipe photo) is sent to the OpenAI API. Processing by OpenAI is subject to
-  <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI's Privacy Policy</a>.
-  No data is sent to OpenAI unless you have entered an API key.
-</p>
+<ul>
+  <li>
+    <strong>Apple Intelligence</strong> — processing happens on Apple's on-device model,
+    directly on your device. Your recipe and ingredient data does not leave the device.
+  </li>
+  <li>
+    <strong>OpenAI</strong> — requires your own OpenAI API key, which you enter voluntarily
+    in the settings. The key is stored
+    <strong>exclusively in your device's Keychain</strong> and is never transmitted to any
+    third party. When you invoke an AI feature, the content needed for it (e.g. the text of
+    a web page, a recipe photo or ingredient names) is sent to the OpenAI API. Processing
+    by OpenAI is subject to
+    <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI's Privacy Policy</a>.
+  </li>
+</ul>
 
 <h2>3.4 Camera and Photo Library</h2>
 <p>
-  When you use the feature to import a recipe from a photo, the app accesses your camera
-  or photo library. This is done solely to extract recipe information. Photos are not
-  stored permanently and are not shared with third parties — except with the OpenAI API
-  if you have entered an API key (see 3.3).
+  The app accesses your camera or photo library when you import a recipe from a photo or
+  scan a product barcode. This is done solely to extract recipe information or to read the
+  barcode. The barcode camera feed is evaluated on the device and is not stored. Recipe
+  photos are not stored permanently and are not shared with third parties — except with the
+  AI provider you selected, if you use the photo import feature (see 3.3).
 </p>
 
-<h2>3.5 Push Notifications</h2>
+<h2>3.5 Barcode lookup (Open Food Facts)</h2>
+<p>
+  When you scan a barcode while adding an item, the app looks the product name up via the
+  public API of
+  <a href="https://world.openfoodfacts.org/" target="_blank">Open Food Facts</a>. Only the
+  scanned barcode number is transmitted — no account, no identifier and no other content
+  from the app. As with any internet request, your device's IP address is technically
+  visible to the operator. Every item can still be entered by hand; without a scan, no
+  lookup takes place.
+</p>
+
+<h2>3.6 Voice control in cooking mode (optional)</h2>
+<p>
+  In cooking mode you can enable voice control to move between steps hands-free. Only then
+  does the app access the microphone. Recognition runs
+  <strong>entirely on your device</strong> — the app explicitly requests on-device
+  recognition and will not start voice control if your device does not support it. Neither
+  audio recordings nor transcripts are stored or transmitted to Apple, to the provider or
+  to any third party.
+</p>
+
+<h2>3.7 Nutrition analysis</h2>
+<p>
+  Nutrition values come from an extract of the <strong>USDA FoodData Central</strong>
+  database bundled with the app. The analysis runs entirely on your device; no server is
+  queried for it. Only if you have enabled AI features are ingredient names sent to the AI
+  provider you selected, for translating those names and for the recommendations (see 3.3).
+</p>
+
+<h2>3.8 Notifications</h2>
 <p>
   When you use the sharing feature, push notifications may be sent via Apple Push
   Notification Service (APNs) to notify shared participants about changes to the shopping
   list. No personal content is transmitted via APNs; Apple only receives a technical
   device signal.
 </p>
-
-<h2>3.6 Settings (UserDefaults)</h2>
 <p>
-  General app settings (e.g. default serving size, category order) are stored locally
-  on your device using UserDefaults. This data does not leave your device.
+  If you set an expiry date for a pantry item, the app additionally schedules a
+  <strong>local</strong> reminder on that device. It is triggered by the device itself; no
+  data is transmitted for it.
+</p>
+
+<h2>3.9 Settings</h2>
+<p>
+  Some settings belong to the household rather than to the device: the default number of
+  people, the order of shopping categories and the learned category assignment of
+  individual items, the household's name and the pantry-integration switch are
+  synchronised via iCloud together with that household's other content (see 3.2). In a
+  shared household they therefore apply to everyone taking part.
+</p>
+<p>
+  Which household is currently active is additionally stored in your private iCloud area,
+  so that your own devices — an Apple Watch, for example — follow the same household. That
+  information is not shared with other people.
+</p>
+<p>
+  Settings that only affect this one device stay purely local to it (UserDefaults): your
+  choice of AI provider, whether completed items are hidden, the selected pantry filter,
+  the cooking-mode voice control settings and whether the introduction has been shown.
+  This data does not leave your device.
 </p>
 
 <h2>4. Legal Basis</h2>
@@ -121,8 +190,12 @@
     under Apple's own privacy terms.
   </li>
   <li>
-    <strong>OpenAI, L.L.C.</strong> — only if you have entered an API key and explicitly
-    invoke an AI feature.
+    <strong>OpenAI, L.L.C.</strong> — only if you have selected OpenAI as your AI provider,
+    entered an API key and explicitly invoked an AI feature.
+  </li>
+  <li>
+    <strong>Open Food Facts</strong> — the scanned barcode number only, and only when you
+    use the barcode scanner (see 3.5).
   </li>
 </ul>
 

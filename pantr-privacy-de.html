@@ -26,7 +26,7 @@
 <body>
 
 <h1>Datenschutzerklärung</h1>
-<p class="updated">Stand: Mai 2026</p>
+<p class="updated">Stand: August 2026</p>
 
 <hr />
 
@@ -38,18 +38,21 @@
 
 <h2>2. Überblick</h2>
 <p>
-  Pantr ist eine App zur Verwaltung von Einkaufslisten und Rezepten. Die App erhebt
-  keine personenbezogenen Daten zu Werbe- oder Analysezwecken und gibt keine Daten
-  an Werbetreibende weiter. Im Folgenden wird erläutert, welche Daten bei der Nutzung
-  der App anfallen und wie sie verarbeitet werden.
+  Pantr ist eine App zur Verwaltung von Einkaufslisten, Rezepten und Vorräten. Die App
+  erhebt keine personenbezogenen Daten zu Werbe- oder Analysezwecken und gibt keine Daten
+  an Werbetreibende weiter. Es gibt kein Nutzerkonto bei Pantr und keinen Server des
+  Anbieters: Deine Inhalte liegen auf deinem Gerät und – sofern du bei iCloud angemeldet
+  bist – in deinem eigenen iCloud-Konto. Im Folgenden wird erläutert, welche Daten bei der
+  Nutzung der App anfallen und wie sie verarbeitet werden.
 </p>
 
 <h2>3. Gespeicherte Daten</h2>
 
 <h2>3.1 Daten auf deinem Gerät und in iCloud</h2>
 <p>
-  Alle von dir eingegebenen Inhalte – Rezepte, Zutaten, Einkaufslisten,
-  Einstellungen – werden lokal auf deinem Gerät gespeichert. Wenn du auf deinem
+  Alle von dir eingegebenen Inhalte – Rezepte, Zutaten, Einkaufslisten, Vorräte
+  (inklusive Mengen, Packungsgrößen und Ablaufdaten) sowie Einstellungen – werden lokal
+  auf deinem Gerät gespeichert. Wenn du auf deinem
   Gerät mit einer Apple ID angemeldet bist, synchronisiert die App diese Daten
   <strong>automatisch</strong> mit deinem iCloud-Konto – ohne dass du etwas
   konfigurieren musst (siehe 3.2). Ohne iCloud-Konto bleiben alle Daten
@@ -59,12 +62,20 @@
 <h2>3.2 iCloud / CloudKit</h2>
 <p>
   Wenn du auf deinem Gerät mit einem Apple-ID-Konto angemeldet bist, werden
-  Rezepte und Einkaufslisten über <strong>CloudKit</strong> (Apple Inc.) mit
-  deinen anderen Apple-Geräten synchronisiert und – falls du die Teilen-Funktion
+  Rezepte, Einkaufslisten und Vorräte über <strong>CloudKit</strong> (Apple Inc.) mit
+  deinen anderen Apple-Geräten – einschließlich einer gekoppelten Apple Watch –
+  synchronisiert und – falls du die Teilen-Funktion
   verwendest – mit von dir ausgewählten Personen geteilt. Die Daten werden in
   deinem persönlichen iCloud-Container gespeichert und unterliegen
   <a href="https://www.apple.com/legal/privacy/de-ww/" target="_blank">Apples Datenschutzrichtlinie</a>.
   Pantr hat keinen Zugriff auf diese Daten außerhalb deines Geräts.
+</p>
+<p>
+  Du kannst mehrere Haushalte parallel führen und jeden einzeln teilen. Innerhalb eines
+  geteilten Haushalts ist für die anderen Teilnehmenden sichtbar, wer einen Artikel oder
+  ein Rezept hinzugefügt hat: Pantr speichert dazu den Vor- und Nachnamen, den Apple für
+  dein iCloud-Konto in der Teilen-Funktion bereitstellt. Diese Angabe wird ausschließlich
+  innerhalb des jeweiligen geteilten Haushalts angezeigt.
 </p>
 <p>
   Die Synchronisation über iCloud erfolgt automatisch, sofern du auf deinem Gerät
@@ -72,32 +83,72 @@
   iCloud deaktiviert werden. Ohne iCloud-Konto arbeitet die App rein lokal.
 </p>
 
-<h2>3.3 OpenAI API (optional)</h2>
+<h2>3.3 KI-Funktionen (optional)</h2>
 <p>
-  Die KI-gestützten Funktionen der App (Rezeptimport aus URLs oder Fotos,
-  KI-Generierung von Rezepten) erfordern einen eigenen OpenAI API-Key, den du
-  freiwillig in den Einstellungen eingeben kannst. Dieser Key wird
-  <strong>ausschließlich im Keychain deines Geräts</strong> gespeichert und
-  niemals an Dritte übermittelt.
+  Die KI-gestützten Funktionen (Rezeptimport aus URLs oder Fotos, Generierung eines
+  Rezepts aus einem Namen oder aus deinem Vorrat, Empfehlungen der Nährwertanalyse) sind
+  optional. In den Einstellungen wählst du den Anbieter aus; die Voreinstellung ist
+  <strong>„Deaktiviert“</strong>, dann sind keine KI-Funktionen sichtbar und es werden
+  keinerlei Daten für KI-Zwecke übermittelt.
 </p>
-<p>
-  Wenn du eine dieser Funktionen verwendest, werden die entsprechenden Inhalte
-  (z. B. der Text einer Webseite oder ein Rezeptfoto) an die OpenAI API gesendet.
-  Die Verarbeitung durch OpenAI unterliegt
-  <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAIs Datenschutzrichtlinie</a>.
-  Ohne eingetragenen API-Key werden keine Daten an OpenAI übermittelt.
-</p>
+<ul>
+  <li>
+    <strong>Apple Intelligence</strong> – die Verarbeitung erfolgt über Apples
+    On-Device-Modell direkt auf deinem Gerät. Deine Rezept- und Zutatendaten verlassen
+    dabei das Gerät nicht.
+  </li>
+  <li>
+    <strong>OpenAI</strong> – erfordert einen eigenen OpenAI API-Key, den du freiwillig
+    in den Einstellungen einträgst. Der Key wird
+    <strong>ausschließlich im Keychain deines Geräts</strong> gespeichert und niemals an
+    Dritte übermittelt. Wenn du eine KI-Funktion aufrufst, werden die dafür nötigen
+    Inhalte (z. B. der Text einer Webseite, ein Rezeptfoto oder Zutatennamen) an die
+    OpenAI API gesendet. Die Verarbeitung durch OpenAI unterliegt
+    <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAIs Datenschutzrichtlinie</a>.
+  </li>
+</ul>
 
 <h2>3.4 Kamera und Fotobibliothek</h2>
 <p>
-  Wenn du die Funktion zum Importieren eines Rezepts per Foto verwendest, greift
-  die App auf deine Kamera oder Fotobibliothek zu. Dies geschieht ausschließlich
-  zum Extrahieren von Rezeptinformationen. Fotos werden nicht dauerhaft gespeichert
-  und nicht an Dritte weitergegeben – außer an die OpenAI API, sofern du einen
-  API-Key eingetragen hast (siehe 3.3).
+  Die App greift auf deine Kamera oder Fotobibliothek zu, wenn du ein Rezept per Foto
+  importierst oder einen Produkt-Barcode scannst. Das geschieht ausschließlich zum
+  Extrahieren von Rezeptinformationen bzw. zum Lesen des Barcodes. Die Bilder der
+  Barcode-Erkennung werden auf dem Gerät ausgewertet und nicht gespeichert. Rezeptfotos
+  werden nicht dauerhaft gespeichert und nicht an Dritte weitergegeben – außer an den von
+  dir gewählten KI-Anbieter, sofern du die Foto-Importfunktion nutzt (siehe 3.3).
 </p>
 
-<h2>3.5 Push-Benachrichtigungen</h2>
+<h2>3.5 Barcode-Abfrage (Open Food Facts)</h2>
+<p>
+  Wenn du beim Anlegen eines Artikels einen Barcode scannst, fragt die App den
+  Produktnamen bei der öffentlichen API von
+  <a href="https://world.openfoodfacts.org/" target="_blank">Open Food Facts</a> ab.
+  Übertragen wird dabei ausschließlich die gescannte Barcode-Nummer – kein Konto, keine
+  Kennung und keine weiteren Inhalte aus der App. Wie bei jedem Internetaufruf ist für den
+  Betreiber technisch die IP-Adresse deines Geräts sichtbar. Es ist möglich, jeden Artikel
+  weiterhin von Hand einzugeben; ohne Scan findet keine Abfrage statt.
+</p>
+
+<h2>3.6 Sprachsteuerung im Kochmodus (optional)</h2>
+<p>
+  Im Kochmodus kannst du die Sprachsteuerung aktivieren, um mit freien Händen zwischen den
+  Schritten zu wechseln. Erst dann greift die App auf das Mikrofon zu. Die Erkennung läuft
+  <strong>ausschließlich auf dem Gerät</strong> – die App fordert die On-Device-Erkennung
+  ausdrücklich an und startet die Sprachsteuerung nicht, wenn dein Gerät sie nicht
+  unterstützt. Es werden weder Audioaufnahmen noch Transkripte gespeichert oder an Apple,
+  den Anbieter oder Dritte übertragen.
+</p>
+
+<h2>3.7 Nährwertanalyse</h2>
+<p>
+  Die Nährwerte stammen aus einem in der App mitgelieferten Auszug der
+  <strong>USDA-FoodData-Central</strong>-Datenbank. Die Auswertung erfolgt vollständig auf
+  dem Gerät; es wird dafür kein Server abgefragt. Nur wenn du KI-Funktionen aktiviert hast,
+  werden für die Übersetzung von Zutatennamen und für die Empfehlungen Zutatennamen an den
+  von dir gewählten KI-Anbieter übermittelt (siehe 3.3).
+</p>
+
+<h2>3.8 Benachrichtigungen</h2>
 <p>
   Wenn du die Teilen-Funktion verwendest, können Push-Benachrichtigungen über
   Apple Push Notification Service (APNs) an geteilte Personen gesendet werden,
@@ -105,12 +156,30 @@
   personenbezogenen Inhalte über APNs übertragen; Apple erhält lediglich ein
   technisches Gerätesignal.
 </p>
-
-<h2>3.6 Einstellungen (UserDefaults)</h2>
 <p>
-  Allgemeine App-Einstellungen (z. B. Standardportionsgröße, Kategoriereihenfolge)
-  werden lokal im Gerätespeicher (UserDefaults) abgelegt. Diese Daten verlassen
-  dein Gerät nicht.
+  Hinterlegst du für einen Vorratsartikel ein Ablaufdatum, plant die App zusätzlich eine
+  <strong>lokale</strong> Erinnerung auf dem jeweiligen Gerät. Diese wird vom Gerät selbst
+  ausgelöst; es werden dafür keine Daten übertragen.
+</p>
+
+<h2>3.9 Einstellungen</h2>
+<p>
+  Ein Teil der Einstellungen gehört zum Haushalt, nicht zum Gerät: die Standard-Personenzahl,
+  die Reihenfolge der Einkaufskategorien und die gelernte Kategoriezuordnung einzelner
+  Artikel, der Name des Haushalts sowie der Schalter für die Vorrats-Integration werden
+  zusammen mit den übrigen Inhalten dieses Haushalts über iCloud synchronisiert (siehe 3.2).
+  In einem geteilten Haushalt gelten sie deshalb für alle Teilnehmenden.
+</p>
+<p>
+  Welcher Haushalt gerade aktiv ist, wird zusätzlich in deinem privaten iCloud-Bereich
+  abgelegt, damit deine eigenen Geräte – etwa eine Apple Watch – demselben Haushalt folgen.
+  Diese Angabe wird nicht mit anderen Personen geteilt.
+</p>
+<p>
+  Rein lokal auf dem Gerät (UserDefaults) bleiben die Einstellungen, die nur dieses Gerät
+  betreffen: die Wahl des KI-Anbieters, ob erledigte Artikel ausgeblendet werden, der
+  gewählte Vorrats-Filter, die Einstellungen der Sprachsteuerung im Kochmodus und der
+  Hinweis, ob die Einführung bereits angezeigt wurde. Diese Daten verlassen dein Gerät nicht.
 </p>
 
 <h2>4. Rechtsgrundlage</h2>
@@ -129,8 +198,12 @@
     im Rahmen von Apples eigenen Datenschutzbestimmungen.
   </li>
   <li>
-    <strong>OpenAI, L.L.C.</strong> – ausschließlich wenn du einen API-Key eingetragen
-    hast und eine KI-Funktion explizit aufrufst.
+    <strong>OpenAI, L.L.C.</strong> – ausschließlich wenn du OpenAI als KI-Anbieter
+    ausgewählt, einen API-Key eingetragen und eine KI-Funktion explizit aufgerufen hast.
+  </li>
+  <li>
+    <strong>Open Food Facts</strong> – ausschließlich die gescannte Barcode-Nummer, und
+    nur wenn du den Barcode-Scanner verwendest (siehe 3.5).
   </li>
 </ul>
 
