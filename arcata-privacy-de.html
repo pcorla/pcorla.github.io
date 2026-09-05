@@ -43,8 +43,11 @@
   Werbe- oder Analysezwecken und gibt keine Daten an Werbetreibende weiter. Es gibt kein
   Nutzerkonto bei Arcata und keinen Server des Anbieters: Deine Inhalte liegen auf deinem
   Gerät und – sofern du bei iCloud angemeldet bist – in deinem eigenen iCloud-Konto. Arcata
-  bindet keine Dienste Dritter ein, verwendet keine künstliche Intelligenz und stellt keine
-  Verbindung zu einem Server außerhalb von Apples eigener iCloud-Infrastruktur her.
+  stellt außerhalb von Apples eigener iCloud-Infrastruktur keine Verbindung zu einem Server
+  her, mit einer Ausnahme: aktivierst du die optionalen KI-gestützten Spartipps und wählst
+  dafür OpenAI als Anbieter, werden zu diesem Zweck Daten an OpenAI übermittelt (siehe 3.3).
+  Ohne diese ausdrückliche Auswahl bindet Arcata keine Dienste Dritter ein und verwendet
+  keine künstliche Intelligenz.
 </p>
 
 <h2>3. Gespeicherte Daten</h2>
@@ -82,7 +85,38 @@
   werden. Ohne iCloud-Konto arbeitet die App rein lokal.
 </p>
 
-<h2>3.3 Einstellungen</h2>
+<h2>3.3 KI-gestützte Spartipps (optional)</h2>
+<p>
+  Die KI-gestützten Spartipps sind optional. In den Einstellungen wählst du den Anbieter
+  aus; die Voreinstellung ist <strong>„Keine“</strong>, dann ist die Funktion nirgends
+  sichtbar und es werden keinerlei Daten für KI-Zwecke übermittelt. Öffnest du danach den
+  Spartipps-Bildschirm, wird automatisch eine neue Analyse deiner Ausgaben angestoßen.
+</p>
+<p>
+  Übermittelt bzw. verarbeitet werden dabei: die monatlichen Durchschnittsbeträge je
+  Kategorie, Titel und Monatsbetrag deiner aktiven regelmäßigen Buchungen (z. B. „Miete“,
+  der Name eines Streaming-Abos oder einer Versicherung), dein Monatseinkommen sowie der
+  aktuell verbleibende Betrag. <strong>Nicht</strong> übermittelt werden die Titel einzelner
+  spontaner Buchungen (z. B. konkrete Geschäfts- oder Händlernamen), Kontodaten oder der
+  Name deines Haushalts.
+</p>
+<ul>
+  <li>
+    <strong>Apple Intelligence</strong> – die Verarbeitung erfolgt über Apples
+    On-Device-Modell direkt auf deinem Gerät. Die oben genannten Daten verlassen dabei das
+    Gerät nicht.
+  </li>
+  <li>
+    <strong>OpenAI</strong> – erfordert einen eigenen OpenAI API-Key, den du freiwillig in
+    den Einstellungen einträgst. Der Key wird <strong>ausschließlich im Keychain deines
+    Geräts</strong> gespeichert und niemals an Dritte übermittelt. Die oben genannten Daten
+    werden bei jeder Analyse an die OpenAI API gesendet. Die Verarbeitung durch OpenAI
+    unterliegt
+    <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAIs Datenschutzrichtlinie</a>.
+  </li>
+</ul>
+
+<h2>3.4 Einstellungen</h2>
 <p>
   Ein Teil der Einstellungen gehört zum Haushalt, nicht zum Gerät: der Name des Haushalts,
   der Monatsbeginn-Tag und die Reihenfolge der Kategorien werden zusammen mit den übrigen
@@ -95,24 +129,31 @@
   mit anderen Personen geteilt.
 </p>
 <p>
-  Rein lokal auf dem Gerät (UserDefaults) bleibt die Reihenfolge der Kategorien, solange sie
-  nicht mit einem Haushalt synchronisiert wurde, sowie der Hinweis, ob die Einführung
-  bereits angezeigt wurde. Diese Daten verlassen dein Gerät nicht.
+  Rein lokal auf dem Gerät (UserDefaults) bleiben Einstellungen, die nur dieses Gerät
+  betreffen: die Wahl des KI-Anbieters sowie der Hinweis, ob die Einführung bereits
+  angezeigt wurde. Diese Daten verlassen dein Gerät nicht.
 </p>
 
 <h2>4. Rechtsgrundlage</h2>
 <p>
   Die Verarbeitung der oben genannten Daten erfolgt auf Grundlage von
-  Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / Bereitstellung der App-Funktionen).
+  Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / Bereitstellung der App-Funktionen) sowie
+  Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), sofern du optionale Funktionen wie die
+  KI-gestützten Spartipps aktivierst.
 </p>
 
 <h2>5. Weitergabe an Dritte</h2>
-<p>
-  Eine Weitergabe deiner Daten an Dritte findet nicht statt, mit Ausnahme von
-  <strong>Apple Inc.</strong> – für die iCloud-Synchronisation und die Teilen-Funktion, im
-  Rahmen von Apples eigenen Datenschutzbestimmungen. Arcata bindet keine weiteren Dienste
-  ein: keine Analytik, keine Werbung, keine KI-Anbieter, keine externen APIs.
-</p>
+<p>Eine Weitergabe deiner Daten an Dritte findet nicht statt, mit Ausnahme von:</p>
+<ul>
+  <li>
+    <strong>Apple Inc.</strong> – für die iCloud-Synchronisation und die Teilen-Funktion, im
+    Rahmen von Apples eigenen Datenschutzbestimmungen.
+  </li>
+  <li>
+    <strong>OpenAI, L.L.C.</strong> – ausschließlich wenn du OpenAI als KI-Anbieter für die
+    Spartipps ausgewählt und einen API-Key eingetragen hast (siehe 3.3).
+  </li>
+</ul>
 
 <h2>6. Speicherdauer</h2>
 <p>

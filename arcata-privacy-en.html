@@ -42,9 +42,11 @@
   and per-category budgets. The app does not collect personal data for advertising or
   analytics purposes and does not share data with advertisers. There is no Arcata user
   account and no server operated by the developer: your content lives on your device and,
-  if you're signed in to iCloud, in your own iCloud account. Arcata does not integrate any
-  third-party services, does not use artificial intelligence, and never connects to any
-  server outside Apple's own iCloud infrastructure.
+  if you're signed in to iCloud, in your own iCloud account. Arcata never connects to any
+  server outside Apple's own iCloud infrastructure, with one exception: if you enable the
+  optional AI-powered savings tips and choose OpenAI as the provider, data is sent to OpenAI
+  for that purpose (see 3.3). Without that explicit choice, Arcata does not integrate any
+  third-party services and does not use artificial intelligence.
 </p>
 
 <h2>3. Data Stored</h2>
@@ -79,7 +81,35 @@
   app works purely locally.
 </p>
 
-<h2>3.3 Settings</h2>
+<h2>3.3 AI-Powered Savings Tips (Optional)</h2>
+<p>
+  The AI-powered savings tips are optional. You choose the provider in Settings; the default
+  is <strong>"None"</strong>, in which case the feature is not visible anywhere and no data
+  is transmitted for AI purposes. Once you've chosen a provider, opening the savings-tips
+  screen automatically triggers a new analysis of your spending.
+</p>
+<p>
+  What's transmitted or processed: the monthly average amount per category, the title and
+  monthly amount of each of your active recurring bookings (e.g. "Rent", the name of a
+  streaming subscription or an insurance policy), your monthly income, and your currently
+  remaining amount. <strong>Not</strong> transmitted: the titles of individual spontaneous
+  bookings (e.g. specific store or merchant names), account data, or your household's name.
+</p>
+<ul>
+  <li>
+    <strong>Apple Intelligence</strong> — processing happens through Apple's on-device model
+    directly on your device. The data described above never leaves the device.
+  </li>
+  <li>
+    <strong>OpenAI</strong> — requires your own OpenAI API key, which you enter voluntarily
+    in Settings. The key is stored <strong>exclusively in your device's Keychain</strong> and
+    is never transmitted to third parties. The data described above is sent to the OpenAI API
+    with every analysis. Processing by OpenAI is subject to
+    <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI's privacy policy</a>.
+  </li>
+</ul>
+
+<h2>3.4 Settings</h2>
 <p>
   Some settings belong to the household rather than the device: the household's name, its
   month-start day, and the category order sync via iCloud along with the rest of that
@@ -91,24 +121,30 @@
   so your own devices follow the same household. This is never shared with anyone else.
 </p>
 <p>
-  Purely local to the device (UserDefaults): the category order before it's synced to a
-  household, and whether the onboarding flow has already been shown. This data never leaves
-  your device.
+  Purely local to the device (UserDefaults): settings that concern only this device — your
+  choice of AI provider, and whether the onboarding flow has already been shown. This data
+  never leaves your device.
 </p>
 
 <h2>4. Legal Basis</h2>
 <p>
   The data described above is processed under Art. 6(1)(b) GDPR (performance of a contract
-  / providing the app's features).
+  / providing the app's features) and, if you enable optional features such as the
+  AI-powered savings tips, Art. 6(1)(a) GDPR (consent).
 </p>
 
 <h2>5. Disclosure to Third Parties</h2>
-<p>
-  Your data is not disclosed to third parties, with the exception of <strong>Apple
-  Inc.</strong> — for iCloud sync and the sharing feature, under Apple's own privacy terms.
-  Arcata does not integrate any other services: no analytics, no advertising, no AI
-  providers, no external APIs.
-</p>
+<p>Your data is not disclosed to third parties, with the exception of:</p>
+<ul>
+  <li>
+    <strong>Apple Inc.</strong> — for iCloud sync and the sharing feature, under Apple's own
+    privacy terms.
+  </li>
+  <li>
+    <strong>OpenAI, L.L.C.</strong> — only if you've chosen OpenAI as the AI provider for
+    savings tips and entered an API key (see 3.3).
+  </li>
+</ul>
 
 <h2>6. Retention</h2>
 <p>
